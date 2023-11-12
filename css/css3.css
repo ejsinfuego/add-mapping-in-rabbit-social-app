@@ -1,0 +1,69 @@
+.body {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: none;
+    
+}
+.profile {
+    display: flex;
+    align-self: center;
+  margin-bottom: 50px;
+  background-color: none;
+  position: sticky;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 16px;
+  
+
+  
+  
+}
+.profile img{
+    position: absolute;
+    height: 150px;
+  width: 150px;
+  border-radius: 100px 100px 100px 100px;
+  background-color: rgb(43, 30, 46);
+  padding: 10px;
+  left: 500px;
+  bottom: 410px;
+  
+ 
+}
+.profile .details1{
+    padding-left: 13px;
+
+
+}
+.details1{
+    margin-top: 50px;
+    margin-left: 125px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background: #2d2d4a;
+    padding: 30px;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+
+
+}
+.details1 span{
+    padding: 15px;
+}
+.updatep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}

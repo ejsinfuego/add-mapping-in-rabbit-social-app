@@ -1,0 +1,949 @@
+:root {
+    --color-primary: #9c9c79;
+    --color-primary-light: hsl(242, 91%, 69%, 18%);
+    --color-primary-variant: #5854c7;
+    --color-red: red;
+    --color-red-light: hsl(346, 87%, 46%, 15%);
+    --color-green: #00c476;
+    --color-green-light: hsl(156, 100%, 38%, 15%);
+    --color-gray-1000: #d3b68d; /* footer */
+    --color-gray-900: #d3b68d;
+    --color-gray-700: #5877cc;
+    --color-gray-300: white;
+    --color-gray-200: rgba(244, 244, 247, 0.7);
+    --color-white: #ffffff;
+    --color-bg: #9c9c79;
+
+    --transition: all 300ms ease;
+
+    --container-width-lg: 74%;
+    --container-width-md: 88%;
+    --form-width: 40%;
+
+    --card-border-radius-1: 0.3rem;
+    --card-border-radius-2: 0.5rem;
+    --card-border-radius-3: 0.8rem;
+    --card-border-radius-4: 2rem;
+    --card-border-radius-5: 5rem;
+}
+/* ============================================================================== GENERAL ================================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    appearance: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--color-gray-200);
+    overflow-x: hidden;
+    background: var(--color-bg);
+    font-size: 0.9rem;
+}
+.position{
+    position: relative;
+
+}
+
+.container {
+    width: var(--container-width-lg);
+    max-width: 1800px;
+    margin-inline: auto;
+}
+
+section {
+    margin-top: 3rem;
+    width: 100vw;
+}
+
+/* add to posts on index if there's no featured post. eg. search results page*/
+/* ADDED AFTER TUTORIAL */
+.section__extra-margin {
+    margin-top: 9rem;
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--color-white);
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+h2 {
+    font-size: 1.7rem;
+    margin: 1rem 0;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin: 0.8rem 0 0.5rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+a {
+    color: var(--color-white);
+    transition: var(--transition);
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.back-button a{
+    padding: 10px;
+    border-radius: var(--card-border-radius-2);
+    background: #232334;
+    
+}
+.back-button a{
+    position: absolute;
+    margin-left: 200px;
+}
+.back-button a:hover{
+    color: #2a2942;
+}
+.back a{
+    padding: 10px;
+    border-radius: var(--card-border-radius-2);
+    background: #232334;
+}
+.form__section a:hover{
+    background-color: #5854c7;
+    color: #f6f6f8;
+}
+/* ============================================================================== CATEGORY BUTTON ================================================================================== */
+
+/* ============================================================================== GENERAL POST ================================================================================== */
+
+
+/* ============================================================================== FEATURED ================================================================================== */
+
+/* ============================================================================== POSTS ================================================================================== */
+
+/* ============================================================================== CATEGORY BUTTONS ================================================================================== */
+.category__buttons {
+    padding: 4rem 0;
+    border-top: 2px solid var(--color-gray-900);
+    border-bottom: 2px solid var(--color-gray-900);
+}
+
+.category__buttons-container {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+/* ============================================================================== FOOTER ================================================================================== */
+footer {
+    background: var(--color-gray-900);
+    padding: 5rem 0 0;
+    box-shadow: inset 0 1.5rem 1.5rem transparent;
+}
+
+.footer__socials {
+    margin-inline: auto;
+    width: fit-content;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.footer__socials a {
+    background: var(--color-bg);
+    border-radius: 50%;
+    width: 2.3rem;
+    height: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__socials a:hover {
+    background: darkblue;
+    color: white;
+}
+
+.footer__container {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+footer h4 {
+    color: var(--color-white);
+    margin-bottom: 0.6rem;
+}
+
+footer ul li {
+    padding: 0.4rem 0;
+}
+
+footer ul a {
+    opacity: 0.75;
+}
+
+footer ul a:hover {
+    letter-spacing: 0.2rem;
+    opacity: 1;
+}
+
+.footer__copyright {
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 2px solid var(--color-bg);
+    margin-top: 4rem;
+}
+
+/* ============================================================================== SEARCH ================================================================================== */
+
+
+/* ============================================================================== BUTTON ================================================================================== */
+.btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--color-primary);
+    border-radius: var(--card-border-radius-2);
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--color-white);
+}
+
+.btn.sm {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+}
+
+.btn.danger {
+    background: var(--color-red);
+}
+
+.btn:hover {
+    background: var(--color-white);
+    color: var(--color-bg);
+}
+
+
+
+/* ============================================================================== SINGLE POST ================================================================================== */
+.singlepost,
+.singlepost-x {
+    margin: 6rem 0 5rem;
+    justify-content: space-between;
+}
+
+.singlepost__container {
+    width: var(--form-width);
+    background: var(--color-gray-900);
+    padding: 1rem 2rem 1rem;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.singlepost__thumbnail,
+.singlepost__thumbnail-x {
+    margin: 1.5rem 0 1rem;
+
+}
+
+.singlepost__container p {
+    margin-top: 0.6rem;
+    line-height: 1.6;
+    
+}
+.singlepost-x{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-left: 50px;
+    margin-top: -3px;
+    width: 1600px;
+
+}
+.singlepost__container-x{
+    border-radius: 15px 15px 15px 15px;
+}
+
+
+.post-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.activity-icon div img{
+    width: 30px;
+    margin-right: 10px;
+}
+.activity-icon div{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 63px;
+}
+.post-box{
+    background: var(--color-gray-900);
+    padding: 1rem 2rem 1rem;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-radius: 20px 20px 20px 20px;
+
+}
+/* ============================================================================== CATEGORY POSTS ================================================================================== */
+.category__title {
+    height: 15rem;
+    margin-top: 4.5rem;
+    background: var(--color-gray-900);
+    display: grid;
+    place-items: center;
+}
+
+/* ============================================================================== EMPTY PAGES ================================================================================== */
+.empty__page {
+    height: 70vh;
+    display: grid;
+    place-content: center;
+}
+
+/* ============================================================================== GENERAL FORM ================================================================================== */
+.box-in{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height:fit-content;
+    overflow: hidden;
+
+
+
+}
+.box-in1{
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+
+}
+.box-in img{
+    position: absolute;
+    height: 120vh;
+}
+.box-in1 img{
+    position: absolute;
+    height: 130vh;
+}
+.box{
+    width: 500px;
+    height: 550px;
+    background: rgb(19, 19, 18);
+    border-radius: 10px;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    position: relative;
+    margin-left: 30px;
+
+}
+:is(.box)::-webkit-scrollbar{
+    width: 0px;
+  }
+.box-1{
+    width: 500px;
+    height: 500px;
+    background: black;
+    border-radius: 8px;
+    position: relative;
+    margin-left: 30px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+:is(.box-1)::-webkit-scrollbar{
+    width: 0px;
+  }
+
+.box button,
+.box-1 button{
+    margin: 20px;
+}
+.box form,
+.box-1 form{
+    position: absolute;
+    inset: 4px;
+    background: #876a44;
+    padding: 29px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    
+}
+.box form h1,
+.box-1 form h1{
+    color: #0c0b0b;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    padding: -50px;
+}
+.box form .inputBox,
+.box-1 form .inputBox{
+    position: relative;
+    width: 410px;
+    margin-top: 35px;
+
+}
+.box form .inputBox input,
+.box-1 form .inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.05rem;
+    transition: 0.5s;
+    z-index: 10;
+}
+.box form .inputBox span,
+.box-1 form .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #131111;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    transition: 0.5s;
+}
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span,
+.box-1 form .inputBox input:valid ~ span,
+.box-1 form .inputBox input:focus ~ span{
+    color: white;
+    font-size: 0.75rem;
+    transform: translateY(-34px);
+}
+.box form .inputBox i,
+.box-1 form .inputBox i{
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.box form .inputBox input:valid ~ i,
+.box form .inputBox input:focus ~ i,
+.box-1 form .inputBox input:valid ~ i,
+.box-1 form .inputBox input:focus ~ i{
+    height: 44px;
+}
+.box-1::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: -60%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: -40%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+
+
+}
+.box::after,
+.box-1::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.borderline,
+.borderline1{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.borderline1::before,
+.borderline::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#d40606,#d40606,#d40606);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+    
+}
+.borderline1::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#d40606,#d40606,#d40606);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+    
+}
+.borderline::after{
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: -60%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#d40606,#d40606,#d40606);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+    
+}
+
+
+
+
+
+
+.form__section {
+    height: 100%;
+    color: white;
+    
+
+}
+.form__section img{
+    position: absolute;
+    height: 116vh;
+    margin-top: -100px;
+    
+}
+.position{
+    margin-top: 150px;
+
+
+}
+
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+_section-container .sizes{
+    margin-bottom: -30px;
+}
+.r-container{
+    background: none;
+    position: relative;
+    margin-top: -100px;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.r-container h6{
+    font-size: 18px;
+    color: white;
+    padding-bottom: 10px;
+}
+.r-container h1{
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.form__section-container {
+    width: 500px;
+    height: fit-content;
+    background-color: var(--color-gray-1000);
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 5px 5px 6px -7px;
+    margin-bottom: 20px;
+
+    
+
+}
+
+.alert__message,
+.box .alert__message,
+.box-1 .alert__message {
+    padding: 0.8rem 1.4rem;
+    margin-bottom: 1rem;
+    border-radius: var(--card-border-radius-2);
+}
+
+.alert__message.error,
+.box .alert__message.error,
+.box-1 .alert__message.error {
+    background: var(--color-red-light);
+    color: var(--color-red);
+}
+
+.alert__message.success,
+.box .alert__message.success,
+.box-1 .alert__message.success 
+    {
+    background: var(--color-green-light);
+    color: var(--color-green);
+}
+/* centers text of alert. eg. empty category-posts page*/
+/* ADDED AFTER TUTORIAL */
+.alert__message,
+.box .alert__message,
+.box-1 .alert__message .lg {
+    text-align: center;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px;
+}
+form input:valid,
+form input:focus{
+    font-size: 0.75rem;
+}
+.form__control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.form__control.inline {
+    flex-direction: row;
+    align-items: center;
+}
+
+input, textarea, select {
+    margin-top: 20px;
+    padding: 0.8rem 1.4rem;
+    background-color: #dbdfe9;
+    border-radius: var(--card-border-radius-2);
+    resize: none;
+    color: rgb(0, 0, 0);
+}
+
+.form__section small {
+    margin-top: 1rem;
+    display: block;
+}
+
+.form__section,
+.box form small a,
+.box-1 form small a {
+    color: rgb(38, 4, 137);
+}
+.box form,
+.box-1 small {
+    color: #0e0e11;
+}
+/* ================================container5=============================== */
+.container5{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 5%;
+    position: absolute;
+}
+.left-sidebar{
+    
+    flex-basis: 25%;
+    position: sticky;
+    top: 70;
+    align-self: flex-start;
+}
+.left-sidebar ul li a{
+    background: var(--color-gray-1000);
+}
+.left-sidebar aside ul li a:hover{
+    background: white;
+}
+.right-sidebar{
+    
+    flex-basis: 25%;
+    position: sticky;
+    top: 70;
+    align-self: flex-start;
+}
+
+.link-button{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #5854c7;
+    width: fit-content;
+}
+h2{
+    margin-left: 200px;
+    margin-bottom: 20px;
+    
+}
+
+/* ============================================================================== DASHBOARD ================================================================================== */
+.dashboard {
+    margin-top: 6rem;
+}
+
+.sidebar__toggle {
+    display: none;
+}
+
+.dashboard__container {
+    display: grid;
+    grid-template-columns: 14rem auto;
+    gap: 2rem;
+    padding: 0.5rem;
+    margin-bottom: 4rem;
+}
+
+.dashboard aside a {
+    background-color: var(--color-gray-1000);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.6rem;
+    color: #fff;
+}
+
+.dashboard aside ul li:not(:last-child) a {
+    border-bottom: 1px solid var(--color-gray-900);
+}
+
+.dashboard aside a:hover {
+    background: var(--color-gray-1000);
+}
+
+.dashboard aside a.active {
+    background-color: var(--color-gray-1000);
+    
+}
+
+
+
+/* ============================================================================== MEDIA QUERIES (MEDIUM DEVICES) ================================================================================== */
+@media screen and (max-width: 1024px) {
+    /* ================= GENERAL ================ */
+    .container {
+        width: var(--container-width-md);
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    h5 {
+        font-size: 0.8rem;
+    }
+    
+
+    /* ============= GENERAL FORM =========== */
+    .form__section-container {
+        padding: 3rem;
+    }
+
+
+    /* ============= DASHBOARD =========== */
+    .dashboard__container {
+        grid-template-columns: 8rem auto;
+        padding: 0;
+        background: transparent;
+    }
+
+    .dashboard aside h5 {
+        display: none;
+    }
+
+    .dashboard main table thead {
+        display: none;
+    }
+
+    .dashboard main table tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dashboard main table tr:nth-child(even) {
+        background: var(--color-gray-900);
+    }
+
+    .dashboard main table tr:hover td {
+        background: transparent;
+    }
+
+}
+
+
+/* ============================================================================== MEDIA QUERIES (SMALL DEVICES) ================================================================================== */
+
+@media screen and (max-width: 600px) {
+    section {
+        margin-top: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .featured {
+        margin-top: 6rem;
+    }
+
+    .featured__container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .category__buttons-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    /* ============= BLOG =========== */
+
+
+    /* ============= SINGLE POST =========== */
+    .singlepost__container {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    /* ============= GENERAL FORM =========== */
+    .form__section-container {
+        padding: 0;
+    }
+
+    /* ============= DASHBOARD =========== */
+    .dashboard {
+        margin-top: 5rem;
+    }
+
+    .dashboard__container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .dashboard main {
+        margin: 0;
+    }
+
+    .dashboard main h2 {
+        margin-top: 1rem;
+    }
+
+    .dashboard aside {
+        position: fixed;
+        box-shadow: 2rem 0 4rem rgba(0, 0, 0, 0.4);
+        left: -100%;
+        height: 100vh;
+        transition: var(--transition);
+        background: var(--color-primary);
+    }
+
+    .dashboard .sidebar__toggle {
+        display: inline-block;
+        background: var(--color-primary-variant);
+        color: var(--color-white);
+        position: fixed;
+        right: 0;
+        bottom: 4rem;
+        z-index: 1;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50% 0 0 50%;
+        font-size: 1.3rem;
+        cursor: pointer;
+        box-shadow: -1rem 0 2rem rgba(0, 0, 0, 0.4);
+    }
+
+    .dashboard aside a h5 {
+        display: inline-block;
+    }
+
+    #hide__sidebar-btn {
+        display: none;
+    }
+
+}
+
