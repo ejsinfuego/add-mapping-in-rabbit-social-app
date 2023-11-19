@@ -2,6 +2,7 @@
 require 'config/database.php';
 
 if(isset($_POST['submit'])) {
+
     $author_id = $_SESSION['user-id'];
     $title = filter_var($_POST['title'], FILTER_SANITIZE_SPECIAL_CHARS);
     $body = filter_var($_POST['body'], FILTER_SANITIZE_SPECIAL_CHARS);

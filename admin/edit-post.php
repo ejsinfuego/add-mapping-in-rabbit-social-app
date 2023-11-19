@@ -24,7 +24,7 @@ if(isset($_GET['id'])) {
 <section class="form__section">
     <div class="container form__section-container">
         <a href="<?= ROOT_URL ?>admin/edit-post.php"><h2><i class="fas fa-arrow-left"></i> Edit Post</h2></a>
-        
+        <?= $post['thumbnail'] ?>
         <form action="<?= ROOT_URL ?>admin/edit-post-logic.php" enctype="multipart/form-data" method="POST">
             <input type="hidden" name="id" value="<?= $post['id'] ?>">
             <input type="hidden" name="previous_thumbnail_name" value="<?= $post['thumbnail'] ?>">

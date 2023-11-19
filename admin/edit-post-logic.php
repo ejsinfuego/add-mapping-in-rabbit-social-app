@@ -32,7 +32,7 @@ if (!$title) {
         $time = time(); // make each image name uploaded unique using current timestamp
         $thumbnail_name = $time . $thumbnail['name'];
         $thumbnail_tm_name = $thumbnail['tmp_name'];
-        $thumbnail_destination_path = "../images/ . $thumbnail_name";
+        $thumbnail_destination_path = "../images/.$thumbnail_name";
 
         //to make sure the file is image
         $allowed_file = ['png', 'jpg', 'jpeg'];
@@ -42,7 +42,7 @@ if (!$title) {
             // make sure the file is no too large (5mb)
             if($thumbnail['size'] < 5_000_000) {
                 //upload avatar
-                move_uploaded_file($thumbnail_tm_name, $previous_thumbnail_path);
+                move_uploaded_file($thumbnail_name, $thumbnail_destination_path);
             } else {
                 $_SESSION['edit-post'] = "Couldn't update post. Thumbnail is too big. Should be less than 5mb";
             }
