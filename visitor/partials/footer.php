@@ -1,4 +1,11 @@
-
+<div style="position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;">
+    <button id="chat" class="btn btn-primary" style="border-radius: 50px;">
+    <i class="fab fa-facebook-messenger"></i>   
+    </button>
+</div>
 <footer>
     <div class="footer__socials">
         <a href="https://youtube.com/egatortutorials" target="_blank"><i class="uil uil-youtube"></i></a>
